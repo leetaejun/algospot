@@ -18,15 +18,15 @@ public class TJLinkedStack<T> {
 	}
 	
 	public T peak() {
-		return topNode.getData();
-	}
-	
-	public T pop() {
 		if (empty()) {
 			return null;
 		}
 		
-		T data = topNode.getData();
+		return topNode.getData();
+	}
+	
+	public T pop() {
+		T data = peak();
 		topNode = topNode.getNextNode();
 		return data;
 	}
