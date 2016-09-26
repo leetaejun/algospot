@@ -23,5 +23,6 @@ public class Main {
 		System.out.println(linkedStack.pop());
 		System.out.println(linkedStack.pop());
 		System.out.println(linkedStack.pop());
+		System.out.println(linkedStack.pop());
 	}
 }

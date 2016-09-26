@@ -12,7 +12,7 @@ public class TJLinkedStack<T> {
 	}
 	
 	public void push(T data) {
-		TJNode newNode = new TJNode(data);
+		TJNode<T> newNode = new TJNode<>(data);
 		newNode.setNextNode(topNode);
 		topNode = newNode;
 	}
@@ -22,9 +22,12 @@ public class TJLinkedStack<T> {
 	}
 	
 	public T pop() {
+		if (empty()) {
+			return null;
+		}
+		
 		T data = topNode.getData();
 		topNode = topNode.getNextNode();
-		
 		return data;
 	}
 }
