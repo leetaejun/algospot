@@ -1,32 +1,32 @@
 package data_structure;
 
-public class TJNode {
-	private Object data;
-	private TJNode nextNode;
+public class TJNode<T> {
+	private T data;
+	private TJNode<T> nextNode;
 	
 	public TJNode() {
 		this.data = null;
 		this.nextNode = null;
 	}
 	
-	public TJNode(Object data) {
+	public TJNode(T data) {
 		this.data = data;
 		this.nextNode = null;
 	}
 
-	public Object getData() {
+	public T getData() {
 		return data;
 	}
 
-	public void setData(Object data) {
+	public void setData(T data) {
 		this.data = data;
 	}
 
-	public TJNode getNextNode() {
-		return nextNode;
+	public TJNode<T> getNextNode() {
+		return this.nextNode;
 	}
 
-	public void setNextNode(TJNode nextNode) {
+	public void setNextNode(TJNode<T> nextNode) {
 		this.nextNode = nextNode;
 	}	
 }
