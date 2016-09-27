@@ -27,6 +27,7 @@ public class Main {
 		System.out.println(linkedStack.pop());
 		*/
 		
+		/*
 		TJArrayQueue arrayQueue = new TJArrayQueue(5);
 		arrayQueue.add("0");
 		
@@ -36,5 +37,20 @@ public class Main {
 		System.out.println(arrayQueue.remove());
 		System.out.println(arrayQueue.remove());
 		System.out.println(arrayQueue.remove());
+		*/
+		
+		TJLinkedQueue<String> linkedQueue = new TJLinkedQueue<>();
+		linkedQueue.add("test1");
+		linkedQueue.add("test2");
+		linkedQueue.add("test3");
+		linkedQueue.add("test4");
+		linkedQueue.add("test5");
+		linkedQueue.add("test6");
+		System.out.println(linkedQueue.remove());
+		System.out.println(linkedQueue.remove());
+		System.out.println(linkedQueue.remove());
+		System.out.println(linkedQueue.remove());
+		System.out.println(linkedQueue.remove());
+		
 	}
 }
