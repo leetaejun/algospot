@@ -1,7 +1,11 @@
 package data_structure;
 
+import java.util.LinkedList;
+
 public class Main {
 	public static void main(String args[]) {
+		LinkedList<String> list = new LinkedList<>();
+		
 		/*
 		TJArrayStack arrayStack = new TJArrayStack(5);
 		arrayStack.push("0");
@@ -39,6 +43,7 @@ public class Main {
 		System.out.println(arrayQueue.remove());
 		*/
 		
+		/*
 		TJLinkedQueue<String> linkedQueue = new TJLinkedQueue<>();
 		linkedQueue.add("test1");
 		linkedQueue.add("test2");
@@ -51,6 +56,30 @@ public class Main {
 		System.out.println(linkedQueue.remove());
 		System.out.println(linkedQueue.remove());
 		System.out.println(linkedQueue.remove());
+		*/
 		
+		TJSinglyLinkedList<String> singlyLinkedList = new TJSinglyLinkedList<>();
+		//singlyLinkedList.add("test1");
+		//singlyLinkedList.add("test2");
+		//singlyLinkedList.add("test3");
+		singlyLinkedList.add("test1", 0);
+		singlyLinkedList.add("test2", 1);
+		singlyLinkedList.add("test3", 2);
+		singlyLinkedList.add("test4", 1);
+		singlyLinkedList.add("test5", 3);
+		
+		for (int i = 0; i < singlyLinkedList.size(); i++) {
+			System.out.println(singlyLinkedList.get(i));
+		}
+		System.out.println("------");
+		singlyLinkedList.removeFirst();
+		for (int i = 0; i < singlyLinkedList.size(); i++) {
+			System.out.println(singlyLinkedList.get(i));
+		}
+		System.out.println("------");
+		singlyLinkedList.removeFirst();
+		for (int i = 0; i < singlyLinkedList.size(); i++) {
+			System.out.println(singlyLinkedList.get(i));
+		}
 	}
 }
