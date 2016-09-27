@@ -16,6 +16,7 @@ public class Main {
 		}
 		*/
 		
+		/*
 		TJLinkedStack<Integer> linkedStack = new TJLinkedStack<>();
 		linkedStack.push(0);
 		linkedStack.push(1);
@@ -24,5 +25,16 @@ public class Main {
 		System.out.println(linkedStack.pop());
 		System.out.println(linkedStack.pop());
 		System.out.println(linkedStack.pop());
+		*/
+		
+		TJArrayQueue arrayQueue = new TJArrayQueue(5);
+		arrayQueue.add("0");
+		
+		System.out.println(arrayQueue.remove());
+		System.out.println(arrayQueue.remove());
+		System.out.println(arrayQueue.remove());
+		System.out.println(arrayQueue.remove());
+		System.out.println(arrayQueue.remove());
+		System.out.println(arrayQueue.remove());
 	}
 }
