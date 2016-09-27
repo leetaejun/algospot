@@ -157,8 +157,8 @@ public class TJSinglyLinkedList<T> {
 	
 	// 접근 가능한 인덱스인지 체크
 	private boolean isPositionIndex(int index) {
-        return index >= 0 && index <= size;
-    }
+		return index >= 0 && index <= size;
+	}
 
 	// 리스트의 사이즈를 반환
 	public int size() {
