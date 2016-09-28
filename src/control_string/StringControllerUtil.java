@@ -1,7 +1,12 @@
 package control_string;
 
 public class StringControllerUtil {
-	// 들어온 문자열을 모두 뒤집는 함수
+	/**
+	 * 들어온 문자열을 모두 뒤집는 함수
+	 * 
+	 * @param input input은 String 타입으로 뒤집을 문자열을 넣어줍니다.
+	 * @return input 문자열을 뒤집은 String 타입이 반환됩니다. ("i say hello world" -> "dlrow olleh yas i")
+	 */
 	public static String reverseString(String input) {
 		if (input == null) {
 			return null;
@@ -18,7 +23,12 @@ public class StringControllerUtil {
 		return String.valueOf(inputCharArray);
 	}
 	
-	// ' '를 기준으로 문자열 뒤집기
+	/**
+	 * ' '를 기준으로 문자열 뒤집기
+	 * 
+	 * @param input input은 String 타입으로 ' '을 기준으로 뒤집을 문자열을 넣어줍니다.
+	 * @return input 문자열을 뒤집은 String 타입이 반환됩니다. ("i say hello world" -> "world hello say i")
+	 */
 	public static String reverseStringByWord(String input) {
 		if (input == null) {
 			return null;
@@ -35,7 +45,12 @@ public class StringControllerUtil {
 		return result;
 	}
 	
-	// 문자열 압축하기 (aaabccbbaa -> a3b1c2b2a2)
+	/**
+	 * 문자열 압축하기
+	 * 
+	 * @param input input은 String 타입으로 압축할 문자열을 넣어줍니다. 
+	 * @return input 문자열의 각 문자들의 중복된 개수를 표현하는 것으로 환합니다. ("aaabccbbaa" -> "a3b1c2b2a2")
+	 */
 	public static String compressString(String input) {
 		if (input == null) {
 			return null;
@@ -60,4 +75,49 @@ public class StringControllerUtil {
 		
 		return sb.toString();
 	}
+	
+	/**
+	 * 문자열에서 특정단어 지우기
+	 * 
+	 * @param input input은 String 타입으로 지울 대상이 되는 값을 넣어줍니다.
+	 * @param target target은 String 타입으로 지울 단어를 넣어줍니다.
+	 * @return input에서 target에 해당하는 값을 모두 지운 뒤의 String 값을 반환합니다.
+	 */
+	public static String removeStringByWord(String input, String target) {
+		if (input == null) {
+			return null;
+		} else if (input.equals("")) {
+			return "";
+		}
+		
+		if (target == null || target.equals("")) {
+			return input;
+		}
+		
+		char[] inputCharArray = input.toCharArray();
+		char[] targetCharArray = target.toCharArray();
+		
+		StringBuilder sb = new StringBuilder();
+		
+		for(int inputCharIndex = 0; inputCharIndex < inputCharArray.length; inputCharIndex++) {
+			int targetCharIndex = 0;
+			for (int compareIndex = inputCharIndex; targetCharIndex < targetCharArray.length && compareIndex < inputCharArray.length; targetCharIndex++, compareIndex++) {
+				if (targetCharArray[targetCharIndex] != inputCharArray[compareIndex]) {
+					break;
+				}
+				
+				if (targetCharIndex == targetCharArray.length - 1) {
+					inputCharIndex = inputCharIndex + targetCharArray.length;
+					break;
+				}
+			}
+			sb.append(inputCharArray[inputCharIndex]);
+		}
+		
+		return sb.toString();
+	}
+	
+	// 문자열에서 특정단어 치환하기
+	
+	// 문자열에서 단어 개수 세기
 }
