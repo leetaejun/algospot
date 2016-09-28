@@ -117,7 +117,48 @@ public class StringControllerUtil {
 		return sb.toString();
 	}
 	
-	// 문자열에서 특정단어 치환하기
+	/**
+	 * 문자열에서 특정 단어 치환하기
+	 * 
+	 * @param input input은 String 타입으로 치환을 할 대상 문자열을 넣어줍니다.
+	 * @param oldString oldString은 String 타입으로 문자열 중 바꿀 대상이 되는 문자열을 넣어줍니다.
+	 * @param newString newString은 String 타입으로 oldString에서 바꿀 문자열을 넣어줍니다.
+	 * @return input에서 oldString 대신 newString으로 바뀐 문자열을 반환합니다.
+	 */
+	public static String replaceStringByWord(String input, String oldString, String newString) {
+		if (input == null) {
+			return null;
+		} else if (input.equals("")) {
+			return "";
+		}
+		
+		if (oldString == null || newString == null || oldString.equals("") || newString.equals("")) {
+			return input;
+		}
+		
+		char[] inputCharArray = input.toCharArray();
+		char[] oldStringCharArray = oldString.toCharArray();
+		
+		StringBuilder sb = new StringBuilder();
+		
+		for(int inputCharIndex = 0; inputCharIndex < inputCharArray.length; inputCharIndex++) {
+			int targetCharIndex = 0;
+			for (int compareIndex = inputCharIndex; targetCharIndex < oldStringCharArray.length && compareIndex < inputCharArray.length; targetCharIndex++, compareIndex++) {
+				if (oldStringCharArray[targetCharIndex] != inputCharArray[compareIndex]) {
+					break;
+				}
+				
+				if (targetCharIndex == oldStringCharArray.length - 1) {
+					inputCharIndex = inputCharIndex + oldStringCharArray.length;
+					sb.append(newString);
+					break;
+				}
+			}
+			sb.append(inputCharArray[inputCharIndex]);
+		}
+		
+		return sb.toString();
+	}
 	
 	// 문자열에서 단어 개수 세기
 }
