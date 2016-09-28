@@ -34,4 +34,30 @@ public class StringControllerUtil {
 		
 		return result;
 	}
+	
+	// 문자열 압축하기 (aaabccbbaa -> a3b1c2b2a2)
+	public static String compressString(String input) {
+		if (input == null) {
+			return null;
+		} else if (input.length() == 0) {
+			return "";
+		}
+
+		char[] inputCharArray = input.toCharArray();
+		StringBuilder sb = new StringBuilder();
+		char prevChar = inputCharArray[0];
+		int count = 0;
+		for (int i = 0; i < inputCharArray.length; i++) {
+			if (prevChar == inputCharArray[i]) {
+				count++;
+			} else {
+				sb.append(prevChar).append(String.valueOf(count));
+				count = 1;
+				prevChar = inputCharArray[i];
+			}
+		}
+		sb.append(prevChar).append(count);
+		
+		return sb.toString();
+	}
 }
