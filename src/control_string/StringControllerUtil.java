@@ -160,5 +160,32 @@ public class StringControllerUtil {
 		return sb.toString();
 	}
 	
-	// 문자열에서 단어 개수 세기
+	/**
+	 * 문자열의 문자들이 전부 유일한지 체크하기
+	 * 
+	 * @param input input은 String 타입으로 각 문자들이 유니크한지 체크할 String을 넣어줍니다.
+	 * @return 유니크하면 true, 중복되는 문자가 있으면 false를 반환합니다.
+	 */
+	public static boolean isUniqueCharacterInString(String input) {
+		if (input == null) {
+			throw new NullPointerException();
+		} else if (input.equals("")) {
+			throw new ArrayIndexOutOfBoundsException();
+		}
+		
+		boolean result = false;
+		
+		char[] inputCharArray = input.toCharArray();
+		
+		for (int i = 0; i < inputCharArray.length; i++) {
+			if (input.lastIndexOf(inputCharArray[i]) != i) {
+				result = false;
+				break;
+			} else {
+				result = true;
+			}
+		}
+		
+		return result;
+	}
 }
