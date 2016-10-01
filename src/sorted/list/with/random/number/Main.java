@@ -32,9 +32,7 @@ public class Main {
 			}
 		}
 		
-		System.out.println(numberList.stream()
-									 .map(String::valueOf)
-									 .collect(Collectors.joining(", ")));
+		System.out.println(numberList.stream().map(String::valueOf).collect(Collectors.joining(", ")));
 	}
 	
 	/*
