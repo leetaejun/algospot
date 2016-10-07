@@ -11,13 +11,16 @@ public class P2309 {
 	public static void main(String args[]) {
 		List<Integer> peopleList = new ArrayList<Integer>();
 		
+		// 입력
 		Scanner scan = new Scanner(System.in);
 		for (int i = 0; i < 9; i++) {
 			peopleList.add(scan.nextInt());
 		}
 		
+		// 오름차순으로 정렬
 		Collections.sort(peopleList);
 		
+		// 결과적으로 제외될 두 명의 인덱스를 선언
 		int exceptionIndex1 = 0;
 		int exceptionIndex2 = 0;
 		
@@ -48,6 +51,7 @@ public class P2309 {
 			}
 		}
 		
+		// 출력
 		for (int i = 0; i < peopleList.size(); i++) {
 			if (i == exceptionIndex1 || i == exceptionIndex2) {
 				continue;

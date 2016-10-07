@@ -17,6 +17,7 @@ public class P2606 {
 		int computerCount = scanner.nextInt();
 		int connectedCount = scanner.nextInt();
 		
+		// 양방향 그래프 생성
 		Map<Integer, Set<Integer>> map = new HashMap<Integer, Set<Integer>>();
 		for (int i = 0; i < connectedCount; i++) {
 			int front = scanner.nextInt();
@@ -37,6 +38,7 @@ public class P2606 {
 			sett.add(front);
 		}
 		
+		// 탐색
 		Queue<Integer> queue = new LinkedList<>();
 		queue.add(1);
 		Set<Integer> checkSet = new HashSet<>();
@@ -54,6 +56,8 @@ public class P2606 {
         		}
         	}
         }
+        
+        // 출력
         System.out.println(count);
 	}
 }
