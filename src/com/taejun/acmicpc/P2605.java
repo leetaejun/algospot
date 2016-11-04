@@ -1,4 +1,4 @@
-package net.acmicpc;
+package com.taejun.acmicpc;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

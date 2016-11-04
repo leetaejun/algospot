@@ -1,4 +1,4 @@
-package data_structure;
+package com.taejun.data_structure;
 
 public class TJLinkedQueue<T> {
 	private TJNode<T> front;

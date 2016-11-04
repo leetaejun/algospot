@@ -1,4 +1,4 @@
-package anagram;
+package com.taejun.acmicpc;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.TreeMap;
 // No.
 // Yes
 
-public class Main {
+public class Anagram {
 	public static void main(String args[]) {
 		List<String> helloList = new ArrayList<>();
 

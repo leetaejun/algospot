@@ -1,4 +1,4 @@
-package net.acmicpc;
+package com.taejun.acmicpc;
 
 import java.util.HashMap;
 import java.util.Map;

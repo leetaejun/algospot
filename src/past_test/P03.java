@@ -1,4 +1,4 @@
-package sorted.list.with.random.number;
+package past_test;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
  * @author leetaejun
  *
  */
-public class Main {
+public class P03 {
 	public static void main(String args[]) {
 		Scanner numberScanner = new Scanner(System.in);
 		

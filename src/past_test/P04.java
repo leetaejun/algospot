@@ -1,4 +1,4 @@
-package uri_decoding;
+package past_test;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
@@ -10,7 +10,7 @@ import java.util.Scanner;
  * 문제 링크 : https://www.algospot.com/judge/problem/read/URI
  */
 
-public class Main {
+public class P04 {
 	public static void main(String args[]) throws UnsupportedEncodingException {
 		
 		List<String> uriList = new ArrayList<>();

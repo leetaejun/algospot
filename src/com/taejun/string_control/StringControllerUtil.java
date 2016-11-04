@@ -1,4 +1,4 @@
-package control_string;
+package com.taejun.string_control;
 
 public class StringControllerUtil {
 	/**

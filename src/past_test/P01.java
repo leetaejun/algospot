@@ -1,4 +1,4 @@
-package coupang2016_1;
+package past_test;
 
 import java.util.Arrays;
 import java.util.HashMap;
