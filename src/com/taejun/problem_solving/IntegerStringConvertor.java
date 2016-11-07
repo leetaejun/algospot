@@ -3,7 +3,7 @@ package com.taejun.problem_solving;
 /**
  * Integer 입력 시, String으로 바꾸는 메소드 만들기
  * String 입력 시, Integer로 바꾸는 메소드 만들기
- * 
+ *
  * Created by leetaejun on 2016. 10. 23..
  */
 public class IntegerStringConvertor {
